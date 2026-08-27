@@ -14,6 +14,12 @@ A four-stage research pipeline over Polymarket built on the Claude Agent SDK. Fi
 **[Right Seat](https://rightseat-cfi.higgsfield.app)** · JavaScript · *live*
 A companion web app for flight instructors (CFI / CFII / MEI), built as a single self-contained page with offline-capable local persistence. Started as a tool I needed for my own students and shipped as a product.
 
+**[DiveDeepr](https://github.com/Djisma/DiveDeepr)** · React Native · *public*
+A conversation game that deals ten questions across four escalating tiers, from safe-with-a-stranger to the ones that need trust already in the room. Rebuilt from a 2024 prototype that wrote every answer to a shared database each player could read back; there is no backend now, and answers stay on the device. Deck logic is pure functions with tests, because "a skipped card never comes back" is the kind of bug that passes a smoke test and fails in front of a user.
+
+**[braille-translator](https://github.com/Djisma/braille-translator)** · Python · *public*
+Grade 1 Braille in both directions, plus a cell-image view for teaching. The core was rewritten after I found the original could not read numbers back at all — digits occupy two cells and the decoder read one at a time, failing silently for two years. Writing a round-trip test surfaced a genuine ambiguity in the script: a letter following a number needs the letter sign, or the reader keeps counting.
+
 **HeroBot** · Python · *private*
 An unattended trading system running against a live brokerage account. Hard mechanical risk limits — daily loss cap, per-trade risk ceiling, maximum concurrent positions, correlation guard — enforced in code rather than left to judgment. Structured logging and out-of-band alerting, with API credentials kept entirely outside the source tree.
 
